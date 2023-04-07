@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle List</title>
+</head>
+<body>
+<div class="row">
+    <h1><a href="/">Vehicle List</a></h1>
+    <form action="/">
+        <input name="name" placeholder="Name"/>
+        <input type="submit" value="Search" formmethod="get"/>
+        <input type="submit" value="Add" formmethod="post">
+    </form>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#vehicles}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{name}}</td>
+            </tr>
+        {{/vehicles}}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
